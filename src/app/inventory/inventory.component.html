@@ -1,0 +1,13 @@
+<h3>Inventory</h3>
+
+<!-- On click, item name is retrieved -->
+<div *ngFor="let i of inventories" (click)="selected(i.name)">
+    <!-- Create Icon, Name and Add/Remove -->
+    <img src="/assets/fruits/{{i.imageUrl}}.png" width="50">
+    <span>{{i.name}}</span>
+    &nbsp;
+    <button type="button" (click)="addTo(1)">+</button>
+    <button type="button" (click)="addTo(-1)">-</button>
+</div>
+
+<!-- Alternatively, we can create select option which chooses quantity to add -->
